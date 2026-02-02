@@ -154,12 +154,10 @@ footer{
         <button onclick="closeRules()">Close</button>
     </div>
 </div>
-
-<!-- SOUNDS -->
-<audio id="diceSound" src="/dice.mp3"></audio>
-<audio id="winSound" src="/win.mp3"></audio>
-
 <script>
+const diceSound = new Audio("dice.mp3");
+const winSound = new Audio("win.mp3");
+
 const TOTAL=16;
 const HEARTS={0:8,1:9};
 
@@ -169,8 +167,6 @@ let names=["",""];
 
 const board=document.getElementById("board");
 const dice=document.getElementById("dice");
-const diceSound=document.getElementById("diceSound");
-const winSound=document.getElementById("winSound");
 
 function createBoard(){
     board.innerHTML="";
